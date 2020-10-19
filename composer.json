@@ -1,0 +1,61 @@
+{
+    "name": "martianatowrk/laravel-json-api-generator",
+    "description": "Fork of MartianAtWork Components for Laravel Framework code generation.",
+    "keywords": ["MartianAtWork", "laravel", "model", "kksoftware", "kksoftwareag"],
+    "homepage": "https://kk-software.de",
+    "support": {
+        "issues": "https://github.com/kksoftwareag/laravel-model-generator/issues",
+        "source": "https://github.com/kksoftwareag/laravel-model-generator"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernhard Sirlinger",
+            "email": "sirlinger@kk-software.de"
+        },
+        {
+            "name": "Cristian Llanos",
+            "email": "cristianllanos@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "doctrine/dbal": "~2.11.1",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/contracts": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/filesystem": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "fzaninotto/faker": ">=1.4 <2.0.0",
+        "mockery/mockery": "~1.4.0",
+        "phpunit/phpunit": "~9.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MartianAtWork\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MartianAtWork\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MartianAtWork\\Coders\\CodersServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test":  [
+            "vendor/bin/phpunit tests"
+        ]
+    }
+}
