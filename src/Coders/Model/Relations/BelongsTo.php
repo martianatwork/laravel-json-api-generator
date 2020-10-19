@@ -83,6 +83,7 @@ class BelongsTo implements Relation
      * @return string
      */
     public function body() {
+        return 'return $this->belongsTo();';
         $body = 'return $this->belongsTo(';
         $body .= $this->related->getQualifiedUserClassName() . '::class';
         if ($this->needsForeignKey()) {

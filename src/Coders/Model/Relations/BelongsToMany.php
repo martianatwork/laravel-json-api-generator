@@ -91,6 +91,7 @@ class BelongsToMany implements Relation
      * @return string
      */
     public function body() {
+        return 'return $this->hasMany();';
         $body = 'return $this->belongsToMany(';
         $body .= $this->reference->getQualifiedUserClassName() . '::class';
         if ($this->needsPivotTable()) {

@@ -394,7 +394,7 @@ class Factory
                 'variables' => '$query, Collection $filters'
             ]);
             foreach ($model->getRelations() as $constraint) {
-                $body .= $this->class->method($constraint->name(), $constraint->body(), ['before' => "\n"]);
+                $body .= $this->class->method(Str::camel($constraint->name()), $constraint->body(), ['before' => "\n"]);
             }
         }
 
@@ -412,7 +412,8 @@ class Factory
             $body .= $this->class->method('getAttributes', $model->getAttributesSchema(), [
                 'variables' => '$resource'
             ]);
-            $startRelations = "return [\n";
+
+            $startRelations = "\$arr = [\n";
             $lower = strtolower($model_name);
             foreach ($model->getRelations() as $constraint) {
                 $name = $constraint->name();
@@ -426,6 +427,8 @@ class Factory
             ],\n";
             }
             $startRelations .= "        ];";
+            $startRelations .= "\n        if(method_exists(\$this, 'additionalRelationShips')) { \$arr = array_merge(\$arr, \$this->additionalRelationShips(\$product, \$isPrimary, \$includeRelationships)); } \n";
+            $startRelations .= "        return \$arr;";
             $body .= $this->class->method('getRelationships', $startRelations, [
                 'variables' => "$$lower, \$isPrimary, array \$includeRelationships"
             ]);
@@ -545,6 +548,9 @@ class Factory
             $body .= "\n    */";
             $body .= $this->class->method('getAttributes', $model->getAttributesSchema(), [
                 'variables' => '$resource'
+            ]);
+            $body .= $this->class->method('additionalRelationShips', 'return [];', [
+                'variables' => '$product, $isPrimary, array $includeRelationships'
             ]);
         }
 
