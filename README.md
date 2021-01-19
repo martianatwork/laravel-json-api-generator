@@ -1,10 +1,9 @@
 # MartianAtWork Laravel
 
-[![Build Status](https://travis-ci.com/kksoftwareag/laravel-model-generator.svg?branch=master)](https://travis-ci.com/kksoftwareag/laravel-model-generator)
-[![Latest Stable Version](https://poser.pugx.org/kksoftwareag/laravel-model-generator/v/stable)](https://packagist.org/packages/kksoftwareag/laravel-model-generator)
-[![Total Downloads](https://poser.pugx.org/kksoftwareag/laravel-model-generator/downloads)](https://packagist.org/packages/kksoftwareag/laravel-model-generator)
-[![Latest Unstable Version](https://poser.pugx.org/kksoftwareag/laravel-model-generator/v/unstable)](https://packagist.org/packages/kksoftwareag/laravel-model-generator)
-[![License](https://poser.pugx.org/kksoftwareag/laravel-model-generator/license)](https://packagist.org/packages/kksoftwareag/laravel-model-generator)
+[![Latest Stable Version](https://poser.pugx.org/martianatowrk/laravel-json-api-generator/v/stable)](https://packagist.org/packages/martianatowrk/laravel-json-api-generator)
+[![Total Downloads](https://poser.pugx.org/martianatowrk/laravel-json-api-generator/downloads)](https://packagist.org/packages/martianatowrk/laravel-json-api-generator)
+[![Latest Unstable Version](https://poser.pugx.org/martianatowrk/laravel-json-api-generator/v/unstable)](https://packagist.org/packages/martianatowrk/laravel-json-api-generator)
+[![License](https://poser.pugx.org/martianatowrk/laravel-json-api-generator/license)](https://packagist.org/packages/martianatowrk/laravel-json-api-generator)
 
 MartianAtWork Laravel is a collection of Laravel Components which aim is 
 to help the development process of Laravel applications by 
@@ -13,10 +12,10 @@ providing some convenient code-generation capabilities.
 ## How does it work?
 
 This package expects that you are using Laravel 5.1 or above.
-You will need to import the `MartianAtWork/laravel` package via composer:
+You will need to import the `martianatowrk/laravel-json-api-generator` package via composer:
 
 ```shell
-composer require MartianAtWork/laravel
+composer require martianatowrk/laravel-json-api-generator
 ```
 
 ### Configuration
