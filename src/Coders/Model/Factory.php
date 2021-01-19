@@ -427,7 +427,7 @@ class Factory
             ],\n";
             }
             $startRelations .= "        ];";
-            $startRelations .= "\n        if(method_exists(\$this, 'additionalRelationShips')) { \$arr = array_merge(\$arr, \$this->additionalRelationShips(\$product, \$isPrimary, \$includeRelationships)); } \n";
+            $startRelations .= "\n        if(method_exists(\$this, 'additionalRelationShips')) { \$arr = array_merge(\$arr, \$this->additionalRelationShips(\$$lower, \$isPrimary, \$includeRelationships)); } \n";
             $startRelations .= "        return \$arr;";
             $body .= $this->class->method('getRelationships', $startRelations, [
                 'variables' => "$$lower, \$isPrimary, array \$includeRelationships"
